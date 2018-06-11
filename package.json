@@ -1,0 +1,26 @@
+{
+  "name": "captainslog",
+  "version": "1.0.0",
+  "description": "Record voice memos like a boss (well, a Captain) and run a sentiment analysis on them",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marthakelly/captainslog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marthakelly/captainslog/issues"
+  },
+  "homepage": "https://github.com/marthakelly/captainslog#readme",
+  "dependencies": {
+    "@google-cloud/language": "^1.2.0",
+    "@google-cloud/speech": "^1.5.0",
+    "@google-cloud/storage": "^1.7.0",
+    "got": "^8.3.1",
+    "twilio": "^3.17.2"
+  }
+}
