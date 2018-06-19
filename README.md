@@ -1,5 +1,33 @@
 # Captain's Log
 
+## TODO
+* write Readme
+* write tests
+* travis ci
+
+<!-- [START badges] -->
+[![Build Status](https://img.shields.io/travis/GoogleChrome/puppeteer/master.svg)](https://travis-ci.org/GoogleChrome/puppeteer)
+<!-- [END badges] -->
+
+###### <!-- gen:last-released-api -->[Usage](todo)<!-- gen:stop --> | [FAQ](#faq) | [Contributing](todo)
+
+> Captain's Log is a guide and collection of scripts to create your own 
+> Puppeteer is a Node library which provides a high-level API to control [headless](https://developers.google.com/web/updates/2017/04/headless-chrome) Chrome or Chromium over the [DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/). It can also be configured to use full (non-headless) Chrome or Chromium.
+
+<!-- [START why] -->
+##### Why?
+A personal log, or daily log, was a type of log used to record a person's thoughts about a current mission, or record discrete entries arranged by date and reporting on activities over the course of a day, which could be recorded by name as an unofficial documentation of events as viewed from their professional position. It was similar to a diary, and was meant to be a personal record not available to others
+<!-- [END why] -->
+
+<!-- [START getstarted] -->
+## Getting Started
+todododod
+
+### Installation
+tododododo
+
+<!-- [END getstarted] -->
+
 ## record the audio memo (attempt 1)
 * iOS, get Google Drive app from the app store
 * create a new folder in Google Drive

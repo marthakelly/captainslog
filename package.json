@@ -4,7 +4,12 @@
   "description": "Record voice memos like a boss (well, a Captain) and run a sentiment analysis on them",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -22,5 +27,13 @@
     "@google-cloud/storage": "^1.7.0",
     "got": "^8.3.1",
     "twilio": "^3.17.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.0.1",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.1.0",
+    "mock-express-request": "^0.2.2",
+    "mock-express-response": "^0.2.2",
+    "sinon": "^6.0.0"
   }
 }
