@@ -1,18 +1,15 @@
-'use strict';
-
-const config = require('./config.json');
-const twilio = require('twilio');
-
-const VoiceResponse = twilio.twiml.VoiceResponse;
+import config from './config.json'; /* #TODO copy config-example.json, name it config.json and add your Google Storage bucket name and Twilio auth token inside the file */
+import twilio from 'twilio';
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 const projectId = process.env.GCLOUD_PROJECT;
 const region = 'us-central1';
+export const pathname = 'handleCall';
 
-function isValidRequest (req, res, pathname) {
+export function isValidRequest (req, res, pathname) {
   let isValid = true;
 
-  // Only validate that requests came from Twilio when the function has been
-  // deployed to production.
+  // validate that the request was sent by Twilio
   if (process.env.NODE_ENV === 'production') {
     isValid = twilio.validateExpressRequest(req, config.TWILIO_AUTH_TOKEN, {
       url: `https://${region}-${projectId}.cloudfunctions.net/${pathname}`
@@ -31,8 +28,8 @@ function isValidRequest (req, res, pathname) {
   return isValid;
 }
 
-exports.handleCall = (req, res) => {
-  if (!isValidRequest(req, res, 'handleCall')) {
+export function handleCall (req, res) {
+  if (!isValidRequest(req, res, pathname)) {
     return;
   }
 
@@ -66,7 +63,7 @@ exports.handleCall = (req, res) => {
     .end();
 };
 
-exports.getRecording = (req, res) => {
+export function getRecording (req, res) {
   if (!isValidRequest(req, res, 'getRecording')) {
     return;
   }
@@ -102,7 +99,7 @@ exports.getRecording = (req, res) => {
     });
 };
 
-exports.analyzeRecording = (event) => {
+export function analyzeRecording (event) {
   const object = event.data;
 
   if (object.resourceState === 'not_exists') {
